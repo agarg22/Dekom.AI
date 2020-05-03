@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel = 'stylesheet' type = 'text/css' href = '{{url_for("static", filename = "style.css")}}' /> 
+
+    </head>
+
+
+    <body>
+        <div class = 'container mt-5 card p-3'>
+
+            <h1 id = 'symptom'>  </h1>
+            <h3 id = 'question' class = 'card-header mt-2'>  </h3>
+
+            <div class = 'card-body'>
+                <row>
+                    <div id = 'button-present' style = 'display: none'>
+                            <button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("present", "True")'> Yes </button>
+                            <button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("present", "False")'> No </button>
+                    </div>
+                </row>
+
+                <row>
+                    <div id = 'button-frequency' style = 'display: none'>
+                        <div class = 'col-12'><button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("frequency", "B")'> Some of the time </button></div>
+                        <div class = 'col-12'><button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("frequency", "A")'> A little of the time </button></div>
+                        <div class = 'col-12'><button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("frequency", "C")'> A good bit of the time </button></div>
+                        <div class = 'col-12'><button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("frequency", "D")'> Most of the time </button></div>
+                        <div class = 'col-12'><button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("frequency", "E")'> All of the time </button></div>
+                    </div>
+                </row>
+
+                <row>
+                    <div id = 'button-severity' style = 'display: none'>
+                        <div class = 'col-sm-12 mt-2'><button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("severity", "A")'> Very mild </button></div>
+                        <div class = 'col-sm-12 mt-2'><button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("severity", "B")'> Mild </button></div>
+                        <div class = 'col-sm-12 mt-2'><button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("severity", "C")'> Moderate </button></div>
+                        <div class = 'col-sm-12 mt-2'><button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("severity", "D")'> Severe </button></div>
+                        <div class = 'col-sm-12 mt-2'><button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("severity", "E")'> Very severe </button></div>
+                    </div>
+                </row>
+
+                <row>            
+                    <div id = 'button-duration' style = 'display: none'>
+                        <button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("duration", "A")'> Less than 6 months </button>
+                        <button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("duration", "B")'> 6 - 12 months </button>
+                        <button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("duration", "C")'> More than 12 months </button>
+                    </div>
+                </row>
+
+                <row>
+                    <div id = 'button-current' style = 'display: none'>
+                        <button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("current", "True")'> Yes </button>
+                        <button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("current", "False")'> No </button>
+                    </div>
+                </row>
+                
+                <row>
+                    <div id = 'button-past' style = 'display: none'>
+                        <button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("past", "True")'> Yes </button>
+                        <button class = 'btn btn-primary btn-block mt-2 btn-lg' onclick = 'answer("past", "False")'> No </button>
+                    </div>
+                </row>
+            </div>
+
+            <div id = 'alerts'>
+
+            </div>
+
+        </div>
+
+
+        <script type = 'text/javascript' src = '{{url_for("static", filename = "script.js")}}'> </script>
+
+    </body>
+
+</html>
